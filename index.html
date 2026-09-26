@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CALI | The Cutest Terrier In the World</title>
+    <meta
+      name="description"
+      content="CALI ($CALI) is the meme coin for the cutest terrier in the world. Buy $CALI with Arc USDC."
+    />
+    <meta name="theme-color" content="#f0a0b0" />
+    <meta property="og:title" content="CALI | The Cutest Terrier In the World" />
+    <meta
+      property="og:description"
+      content="Name CALI. Symbol CALI. Buy $CALI with Arc USDC."
+    />
+    <meta property="og:image" content="banner.png" />
+    <link rel="icon" href="logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredoka:wght@500;600;700&family=Nunito:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blush: "#f0a0b0",
+              rose: "#a83d62",
+              roseink: "#8e3154",
+              cream: "#fff6ea",
+              sand: "#f6e2c4",
+              cocoa: "#a06030",
+              bark: "#5c3318",
+            },
+            fontFamily: {
+              display: ["Fredoka", "Trebuchet MS", "sans-serif"],
+              body: ["Nunito", "Trebuchet MS", "sans-serif"],
+              hand: ["Caveat", "cursive"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        background-color: #f0a0b0;
+        scroll-behavior: smooth;
+      }
+      body {
+        position: relative;
+        z-index: 0;
+        min-height: 100vh;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-image: linear-gradient(
+            180deg,
+            rgba(240, 160, 176, 0.72),
+            rgba(255, 246, 234, 0.78) 42%,
+            rgba(240, 160, 176, 0.74)
+          ),
+          url("bg.png");
+        background-size: cover;
+        background-position: 18% center;
+        background-repeat: no-repeat;
+      }
+      section {
+        scroll-margin-top: 9.5rem;
+      }
+      ::selection {
+        background: #f0a0b0;
+        color: #5c3318;
+      }
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      @keyframes wag {
+        0%,
+        100% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(-10deg);
+        }
+        50% {
+          transform: rotate(8deg);
+        }
+        75% {
+          transform: rotate(-6deg);
+        }
+      }
+      .animate-marquee {
+        animation: marquee 28s linear infinite;
+      }
+      .marquee:hover .animate-marquee {
+        animation-play-state: paused;
+      }
+      .logo-wag:hover img {
+        animation: wag 0.45s ease-in-out;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .animate-marquee,
+        .logo-wag:hover img {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-body text-bark antialiased">
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
+      <symbol id="paw" viewBox="0 0 80 80">
+        <ellipse cx="16" cy="30" rx="9" ry="12" />
+        <ellipse cx="33" cy="16" rx="9" ry="12" />
+        <ellipse cx="51" cy="16" rx="9" ry="12" />
+        <ellipse cx="66" cy="32" rx="9" ry="12" />
+        <path
+          d="M40 40c-14 0-24 9-24 19 0 9 8 14 16 14 5 0 7-3 8-3s3 3 8 3c8 0 16-5 16-14 0-10-10-19-24-19z"
+        />
+      </symbol>
+    </svg>
+
+    <header class="sticky top-0 z-40 border-b-[3px] border-bark/10 bg-cream/90 backdrop-blur-md">
+      <div class="h-1.5 bg-rose"></div>
+      <div class="h-1.5 bg-blush"></div>
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-3">
+        <a href="#top" class="logo-wag flex items-center gap-3">
+          <img
+            src="logo.jpg"
+            width="400"
+            height="400"
+            alt="CALI logo, a cartoon terrier face"
+            class="h-12 w-12 rounded-full border-4 border-white shadow-[3px_3px_0_#f0a0b0]"
+          />
+          <span class="leading-none">
+            <span class="block font-display text-2xl font-bold tracking-wide text-bark">CALI</span>
+            <span class="block font-display text-xs font-semibold tracking-[0.22em] text-rose">$CALI</span>
+          </span>
+        </a>
+
+        <nav class="order-3 flex w-full justify-center gap-1 sm:order-none sm:w-auto" aria-label="Page">
+          <a href="#about" class="rounded-full px-3 py-2 font-display text-sm font-semibold text-bark hover:bg-blush sm:px-4 sm:text-base">About</a>
+          <a href="#how-to-buy" class="rounded-full px-3 py-2 font-display text-sm font-semibold text-bark hover:bg-blush sm:px-4 sm:text-base">How to Buy</a>
+          <a href="#chart" class="rounded-full px-3 py-2 font-display text-sm font-semibold text-bark hover:bg-blush sm:px-4 sm:text-base">Chart</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <a
+            href="https://x.com/calitheterrierx"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="CALI on X"
+            class="inline-flex h-11 w-11 overflow-hidden rounded-2xl border-[3px] border-bark shadow-[3px_3px_0_#5c3318] transition hover:-translate-y-0.5"
+          >
+            <img src="x.png" width="554" height="554" alt="" class="h-full w-full object-cover" />
+          </a>
+          <a
+            href="https://argus.world/token/TBA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center rounded-full bg-rose px-4 py-2.5 font-display text-base font-semibold text-white shadow-[3px_3px_0_#5c3318] transition hover:-translate-y-0.5 hover:bg-roseink sm:px-5"
+          >
+            Buy Now
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="mx-auto max-w-5xl px-4 pb-8 pt-8 sm:pt-12">
+        <div class="rounded-[36px] border-[3px] border-bark bg-cream px-5 py-8 text-center shadow-[8px_8px_0_#5c3318] sm:px-10 sm:py-12">
+          <p class="inline-flex items-center gap-2 rounded-full bg-sand px-4 py-1.5 font-display text-sm font-semibold text-bark">
+            <svg class="h-4 w-4 text-rose" aria-hidden="true"><use href="#paw" /></svg>
+            Name CALI · Symbol CALI
+          </p>
+          <h1 class="mx-auto mt-5 max-w-3xl font-display text-5xl font-bold leading-[1.02] tracking-tight text-bark sm:text-7xl">
+            The Cutest Terrier<br />In the World
+          </h1>
+          <p class="mx-auto mt-5 max-w-2xl text-lg font-semibold leading-relaxed text-bark/90 sm:text-xl">
+            Meet Cali, the meme for the cutest terrier in the world. Sandy cheeks, cocoa ears, and a pink collar energy that does not quit. $CALI lives on Arc, and the way in is Arc USDC.
+          </p>
+
+          <img
+            src="banner.png"
+            width="1500"
+            height="500"
+            alt="Banner of Cali the terrier beside the Cali wordmark"
+            class="mt-8 w-full rounded-[28px] border-4 border-white shadow-[6px_6px_0_#f0a0b0]"
+          />
+
+          <div class="mx-auto mt-8 max-w-xl rounded-[28px] border-[3px] border-blush bg-white p-3 text-left shadow-[4px_4px_0_#f0a0b0] sm:p-4">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <label for="ca" class="shrink-0 font-display text-sm font-semibold uppercase tracking-[0.16em] text-rose">
+                Available CA
+              </label>
+              <input
+                id="ca"
+                class="js-ca min-w-0 flex-1 rounded-2xl bg-sand/70 px-3 py-2 font-mono text-base font-bold tracking-wide text-bark outline-none"
+                type="text"
+                readonly
+                value="TBA"
+              />
+              <button
+                type="button"
+                data-copy
+                class="inline-flex items-center justify-center rounded-full bg-rose px-5 py-2.5 font-display text-base font-semibold text-white transition hover:bg-roseink"
+              >
+                <span data-copy-label>Copy</span>
+              </button>
+            </div>
+            <p class="mt-2 px-1 text-sm font-semibold text-cocoa">Copy the contract and match it on Argus before you swap.</p>
+          </div>
+
+          <div class="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a
+              href="https://argus.world/token/TBA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex w-full items-center justify-center rounded-full bg-rose px-8 py-3.5 font-display text-lg font-semibold text-white shadow-[4px_4px_0_#5c3318] transition hover:-translate-y-0.5 hover:bg-roseink sm:w-auto"
+            >
+              Buy Now
+            </a>
+            <a
+              href="https://dexscreener.com/arc/TBA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex w-full items-center justify-center rounded-full border-[3px] border-bark bg-cream px-8 py-3.5 font-display text-lg font-semibold text-bark shadow-[4px_4px_0_#5c3318] transition hover:-translate-y-0.5 sm:w-auto"
+            >
+              Chart
+            </a>
+          </div>
+
+          <ul class="mt-8 flex flex-wrap items-center justify-center gap-2">
+            <li class="rounded-full bg-blush px-4 py-2 font-display text-sm font-semibold text-bark">Name · CALI</li>
+            <li class="rounded-full bg-blush px-4 py-2 font-display text-sm font-semibold text-bark">Symbol · CALI</li>
+            <li class="rounded-full bg-blush px-4 py-2 font-display text-sm font-semibold text-bark">Chain · Arc</li>
+            <li class="rounded-full bg-blush px-4 py-2 font-display text-sm font-semibold text-bark">Buy with · Arc USDC</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="marquee overflow-hidden border-y-[3px] border-bark/15 bg-blush">
+        <div class="animate-marquee flex w-max">
+          <p class="flex items-center gap-8 py-3 pr-8 font-display text-lg font-semibold text-bark">
+            <span>The Cutest Terrier In the World</span>
+            <svg class="h-5 w-5" aria-hidden="true"><use href="#paw" /></svg>
+            <span>$CALI</span>
+            <svg class="h-5 w-5" aria-hidden="true"><use href="#paw" /></svg>
+            <span>Name CALI</span>
+            <svg class="h-5 w-5" aria-hidden="true"><use href="#paw" /></svg>
+            <span>Symbol CALI</span>
+            <svg class="h-5 w-5" aria-hidden="true"><use href="#paw" /></svg>
+            <span>Arc USDC</span>
+            <svg class="h-5 w-5" aria-hidden="true"><use href="#paw" /></svg>
+            <span>Good dog</span>
+            <svg class="h-5 w-5" aria-hidden="true"><use href="#paw" /></svg>
+          </p>
+          <p class="flex items-center gap-8 py-3 pr-8 font-display text-lg font-semibold text-bark" aria-hidden="true">
+            <span>The Cutest Terrier In the World</span>
+            <svg class="h-5 w-5"><use href="#paw" /></svg>
+            <span>$CALI</span>
+            <svg class="h-5 w-5"><use href="#paw" /></svg>
+            <span>Name CALI</span>
+            <svg class="h-5 w-5"><use href="#paw" /></svg>
+            <span>Symbol CALI</span>
+            <svg class="h-5 w-5"><use href="#paw" /></svg>
+            <span>Arc USDC</span>
+            <svg class="h-5 w-5"><use href="#paw" /></svg>
+            <span>Good dog</span>
+            <svg class="h-5 w-5"><use href="#paw" /></svg>
+          </p>
+        </div>
+      </div>
+
+      <section id="about" class="mx-auto max-w-5xl px-4 py-14 sm:py-16">
+        <div class="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="rounded-[36px] border-[3px] border-bark bg-cream p-6 shadow-[8px_8px_0_#5c3318] sm:p-8">
+            <p class="font-display text-sm font-semibold uppercase tracking-[0.18em] text-rose">About Cali</p>
+            <h2 class="mt-2 font-display text-4xl font-bold leading-tight text-bark sm:text-5xl">A very good dog with a ticker</h2>
+            <p class="mt-4 text-lg font-semibold leading-relaxed">
+              Cali is the cutest terrier in the world, and $CALI is the meme that refuses to be quiet about it. The cartoon face is the sticker. The pup in the sunset is the real thing. Same ears. Same bright eyes. Same pink-collar attitude.
+            </p>
+            <ul class="mt-6 space-y-3">
+              <li class="flex gap-3 rounded-2xl bg-sand/80 px-4 py-3 font-semibold">
+                <svg class="mt-0.5 h-6 w-6 shrink-0 text-rose" aria-hidden="true"><use href="#paw" /></svg>
+                <span>Cocoa ears, cream cheeks, and a smile that started a whole coin.</span>
+              </li>
+              <li class="flex gap-3 rounded-2xl bg-sand/80 px-4 py-3 font-semibold">
+                <svg class="mt-0.5 h-6 w-6 shrink-0 text-rose" aria-hidden="true"><use href="#paw" /></svg>
+                <span>Bought with Arc USDC, so the pack stays on one chain.</span>
+              </li>
+              <li class="flex gap-3 rounded-2xl bg-sand/80 px-4 py-3 font-semibold">
+                <svg class="mt-0.5 h-6 w-6 shrink-0 text-rose" aria-hidden="true"><use href="#paw" /></svg>
+                <span>Name CALI. Symbol CALI. Easy to cheer for at the park.</span>
+              </li>
+            </ul>
+          </div>
+
+          <figure class="mx-auto w-full max-w-sm rotate-1 rounded-[8px] border-4 border-white bg-cream p-3 pb-8 shadow-[8px_8px_0_#5c3318]">
+            <img
+              src="bg.png"
+              width="680"
+              height="658"
+              alt="Cali, a small terrier in a striped shirt, sitting at sunset"
+              class="aspect-square w-full rounded-sm object-cover object-[28%_center]"
+            />
+            <figcaption class="mt-3 text-center font-hand text-3xl text-rose">the cutest terrier in the world</figcaption>
+          </figure>
+        </div>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          <article class="rounded-[28px] border-[3px] border-bark bg-cream p-5 shadow-[6px_6px_0_#a06030]">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blush text-bark">
+              <svg class="h-7 w-7" aria-hidden="true"><use href="#paw" /></svg>
+            </div>
+            <h3 class="mt-4 font-display text-2xl font-bold">The Face</h3>
+            <p class="mt-2 font-semibold leading-relaxed">Those eyes are not a suggestion. Cali is the cutest terrier in the world, and the logo just agreed.</p>
+          </article>
+          <article class="rounded-[28px] border-[3px] border-bark bg-cream p-5 shadow-[6px_6px_0_#a06030]">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blush font-display text-lg font-bold text-bark">$</div>
+            <h3 class="mt-4 font-display text-2xl font-bold">The Treat</h3>
+            <p class="mt-2 font-semibold leading-relaxed">Arc USDC is the treat. Swap it for $CALI and you are in the pack.</p>
+          </article>
+          <article class="rounded-[28px] border-[3px] border-bark bg-cream p-5 shadow-[6px_6px_0_#a06030]">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blush font-display text-sm font-bold text-bark">CALI</div>
+            <h3 class="mt-4 font-display text-2xl font-bold">The Ticker</h3>
+            <p class="mt-2 font-semibold leading-relaxed">One name, one symbol. CALI on the tag, $CALI in the wallet.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="how-to-buy" class="mx-auto max-w-5xl px-4 pb-14">
+        <div class="rounded-[36px] border-[3px] border-bark bg-cream p-6 shadow-[8px_8px_0_#5c3318] sm:p-10">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div class="max-w-2xl">
+              <p class="font-display text-sm font-semibold uppercase tracking-[0.18em] text-rose">How to Buy</p>
+              <h2 class="mt-2 font-display text-4xl font-bold leading-tight text-bark sm:text-5xl">Four steps to $CALI</h2>
+              <p class="mt-3 text-lg font-semibold leading-relaxed">
+                Bring Arc USDC. That is how you buy the cutest terrier in the world. Four small steps, then the tail starts wagging.
+              </p>
+            </div>
+            <p class="rounded-full bg-blush px-4 py-2 font-display text-sm font-semibold text-bark">Pay with Arc USDC</p>
+          </div>
+
+          <ol class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <li class="rounded-[28px] border-[3px] border-blush bg-white p-5">
+              <p class="font-display text-4xl font-bold text-rose">01</p>
+              <h3 class="mt-2 font-display text-2xl font-bold">Set up a wallet</h3>
+              <p class="mt-2 font-semibold leading-relaxed text-bark/90">
+                Install a wallet that supports the Arc network. Make a new one, or open the wallet you already trust.
+              </p>
+            </li>
+            <li class="rounded-[28px] border-[3px] border-blush bg-white p-5">
+              <p class="font-display text-4xl font-bold text-rose">02</p>
+              <h3 class="mt-2 font-display text-2xl font-bold">Get Arc USDC</h3>
+              <p class="mt-2 font-semibold leading-relaxed text-bark/90">
+                Fund the wallet with USDC on Arc. $CALI is bought with Arc USDC, so a balance on another chain will not work. Keep a little extra for the swap.
+              </p>
+            </li>
+            <li class="rounded-[28px] border-[3px] border-blush bg-white p-5">
+              <p class="font-display text-4xl font-bold text-rose">03</p>
+              <h3 class="mt-2 font-display text-2xl font-bold">Connect on Argus</h3>
+              <p class="mt-2 font-semibold leading-relaxed text-bark/90">
+                Press Buy Now, connect your wallet, and open $CALI. Match the token with the available CA on this page.
+              </p>
+            </li>
+            <li class="rounded-[28px] border-[3px] border-blush bg-white p-5">
+              <p class="font-display text-4xl font-bold text-rose">04</p>
+              <h3 class="mt-2 font-display text-2xl font-bold">Swap for $CALI</h3>
+              <p class="mt-2 font-semibold leading-relaxed text-bark/90">
+                Enter your Arc USDC amount, check the rate, and confirm. $CALI lands in your wallet. Welcome to the cutest terrier in the world.
+              </p>
+            </li>
+          </ol>
+
+          <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a
+              href="https://argus.world/token/TBA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex w-full items-center justify-center rounded-full bg-rose px-8 py-3.5 font-display text-lg font-semibold text-white shadow-[4px_4px_0_#5c3318] transition hover:-translate-y-0.5 hover:bg-roseink sm:w-auto"
+            >
+              Buy Now
+            </a>
+            <a
+              href="https://dexscreener.com/arc/TBA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex w-full items-center justify-center rounded-full border-[3px] border-bark bg-cream px-8 py-3.5 font-display text-lg font-semibold text-bark shadow-[4px_4px_0_#5c3318] transition hover:-translate-y-0.5 sm:w-auto"
+            >
+              Chart
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="chart" class="mx-auto max-w-5xl px-4 pb-16">
+        <div class="rounded-[36px] border-[3px] border-bark bg-cream p-6 shadow-[8px_8px_0_#5c3318] sm:p-10">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div class="max-w-2xl">
+              <p class="font-display text-sm font-semibold uppercase tracking-[0.18em] text-rose">Chart</p>
+              <h2 class="mt-2 font-display text-4xl font-bold leading-tight text-bark sm:text-5xl">Watch the tail wag</h2>
+              <p class="mt-3 text-lg font-semibold leading-relaxed">
+                Live Dexscreener chart for $CALI on Arc. The cutest terrier in the world, drawn as a price.
+              </p>
+            </div>
+            <a
+              href="https://dexscreener.com/arc/TBA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center rounded-full border-[3px] border-bark bg-white px-6 py-3 font-display text-lg font-semibold text-bark shadow-[4px_4px_0_#5c3318] transition hover:-translate-y-0.5"
+            >
+              Chart
+            </a>
+          </div>
+
+          <div class="relative mt-6 h-[480px] w-full overflow-hidden rounded-[28px] border-[3px] border-bark bg-white shadow-[6px_6px_0_#f0a0b0] sm:h-[560px]">
+            <iframe
+              title="CALI chart on Dexscreener"
+              src="https://dexscreener.com/arc/TBA?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=light&theme=light&chartStyle=1&chartType=usd&interval=15"
+              class="absolute inset-0 h-full w-full border-0"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <p class="mt-3 text-center text-sm font-semibold text-cocoa">
+            Dexscreener embed ·
+            <a class="underline decoration-blush decoration-2 underline-offset-2 hover:text-rose" href="https://dexscreener.com/arc/TBA" target="_blank" rel="noopener noreferrer">dexscreener.com/arc/TBA</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t-[3px] border-bark/10 bg-cream">
+      <div class="h-1.5 bg-blush"></div>
+      <div class="mx-auto flex max-w-5xl flex-col items-center gap-5 px-4 py-10 text-center">
+        <a href="#top" class="logo-wag flex items-center gap-3">
+          <img src="logo.jpg" width="400" height="400" alt="" class="h-14 w-14 rounded-full border-4 border-white shadow-[3px_3px_0_#f0a0b0]" />
+          <span class="font-display text-3xl font-bold text-bark">CALI</span>
+        </a>
+        <p class="max-w-md font-display text-xl font-semibold text-bark">The Cutest Terrier In the World</p>
+        <a
+          href="https://x.com/calitheterrierx"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 rounded-full border-[3px] border-bark bg-white py-1.5 pl-1.5 pr-4 font-display font-semibold text-bark shadow-[3px_3px_0_#5c3318] transition hover:-translate-y-0.5"
+        >
+          <img src="x.png" width="554" height="554" alt="" class="h-9 w-9 rounded-xl" />
+          @calitheterrier
+        </a>
+        <p class="max-w-lg text-sm font-semibold leading-relaxed text-cocoa">
+          $CALI is a meme coin on Arc. It is not financial advice. The cutest terrier in the world can still be a wild market. Do your own research, and be a good dog.
+        </p>
+      </div>
+    </footer>
+
+    <div
+      id="toast"
+      role="status"
+      class="pointer-events-none fixed bottom-5 left-1/2 z-50 -translate-x-1/2 translate-y-3 rounded-full bg-bark px-5 py-2.5 font-display text-cream opacity-0 transition"
+    >
+      CA copied. Good dog.
+    </div>
+
+    <script>
+      const caValue = () => document.querySelector(".js-ca").value.trim();
+
+      document.querySelectorAll(".js-ca").forEach((input) => {
+        input.addEventListener("focus", () => input.select());
+      });
+
+      document.querySelectorAll("[data-copy]").forEach((button) => {
+        button.addEventListener("click", async () => {
+          const value = caValue();
+          const label = button.querySelector("[data-copy-label]");
+          const toast = document.getElementById("toast");
+          label.textContent = "Copied";
+          toast.textContent = "CA copied. Good dog.";
+          toast.classList.remove("translate-y-3", "opacity-0");
+          window.clearTimeout(button._timer);
+          button._timer = window.setTimeout(() => {
+            label.textContent = "Copy";
+            toast.classList.add("translate-y-3", "opacity-0");
+          }, 1600);
+          try {
+            await navigator.clipboard.writeText(value);
+          } catch (error) {
+            const input = document.querySelector(".js-ca");
+            input.focus();
+            input.select();
+            document.execCommand("copy");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
